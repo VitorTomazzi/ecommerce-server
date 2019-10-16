@@ -45,7 +45,7 @@ router.post('/signup', (req, res, next) => {
 
 router.post('/login', (req, res, next) => {
 	const { username, password } = req.body;
-
+	console.log(req.body, '90909090909090909090');
 	// first check to see if there's a document with that username
 	User.findOne({ username })
 		.then((userDoc) => {
