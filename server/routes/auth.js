@@ -14,9 +14,9 @@ router.get('/getUser', (req, res, next) => {
 
 router.post('/signup', (req, res, next) => {
 	console.log(req.body, '-=-=-=-=-=-=-=-=????');
-	const { username, password, name } = req.body;
-	if (!username || !password) {
-		res.status(400).json({ message: 'Indicate username and password' });
+	const { username, password, email, name } = req.body;
+	if (!username || !password || !email) {
+		res.status(400).json({ message: 'Indicate username, password, email' });
 		return;
 	}
 	User.findOne({ username })
@@ -27,7 +27,7 @@ router.post('/signup', (req, res, next) => {
 			}
 			const salt = bcrypt.genSaltSync(bcryptSalt);
 			const hashPass = bcrypt.hashSync(password, salt);
-			const newUser = new User({ username, password: hashPass, name });
+			const newUser = new User({ username, password: hashPass, email, name });
 			return newUser.save();
 		})
 		.then((userSaved) => {

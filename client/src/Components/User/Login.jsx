@@ -39,7 +39,7 @@ export default class Login extends Component {
 					<div className="header">
 						<h3>Welcome Back!</h3>
 
-						<p>We know. You're hungry, too</p>
+						<p>Someone say cereal?</p>
 					</div>
 
 					<div className="sep" />

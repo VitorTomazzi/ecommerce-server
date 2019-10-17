@@ -4,7 +4,7 @@ import { ProductConsumer } from '../../Context';
 import CartColumns from './CartColumns';
 import CartList from './CartList';
 import { Link } from 'react-router-dom';
-import EnterBilling from './EnterBilling';
+// import EnterBilling from './EnterBilling';
 
 export default class Cart extends Component {
 	render() {

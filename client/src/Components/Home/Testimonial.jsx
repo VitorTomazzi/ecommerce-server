@@ -84,7 +84,8 @@ const Who = styled.div`
 		flex-direction: column;
 		align-items: center;
 		flex-wrap: wrap;
-		${'' /* border: .1rem solid green; */} margin: 3rem .5rem;
+		${'' /* border: .1rem solid green; */} 
+		margin: 1rem .5rem;
 		background-color: white;
 		padding: 1.5rem;
 		border-radius: 1rem;

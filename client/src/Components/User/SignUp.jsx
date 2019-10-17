@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import api from '../../api';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default class Signup extends Component {
 	constructor(props) {
@@ -72,11 +72,9 @@ export default class Signup extends Component {
 							<input name="cecky" id="checky" value="1" type="checkbox" />
 							<label className="terms">I accept the terms of use</label>
 						</div>
-						<Link to="#">
 							<button id="submit" className="hoverButton" onClick={(e) => this.handleClick(e)}>
 								Check Out
 							</button>
-						</Link>
 						{this.state.message && <div className="info info-danger">{this.state.message}</div>}
 					</div>
 				</form>

@@ -31,6 +31,7 @@ class Products extends Component {
 
 	render() {
 		let value = this.props.value;
+		console.log(value.cart, value.cereal);
 		return (
 			<div>
 				<ProductTitle>
@@ -79,22 +80,24 @@ class Products extends Component {
 	}
 }
 
-// need to lift this up so that I can have access to it in the context and in turn in the details page 
+// need to lift this up so that I can have access to it in the context and in turn in the details page
 function checkIfCerealInCart(eachCereal, cart) {
 	// console.log(cart);
+	console.log('-=-=-=-', cart.length);
 	for (let c = 0; c < cart.length; c++) {
+		console.log(c);
 		let cereal = cart[c];
-		// console.log(cereal.image, eachCereal.image, cereal.image === eachCereal.image);
+		console.log(cereal.image, eachCereal.image, cereal.image === eachCereal.image);
 		if (cereal.image === eachCereal.image) {
 			//found a match
-			// console.log('match');
+			console.log('match');
 			return true;
+			break;
 		}
 		// console.log('no match');
-		return false;
 	}
+	return false;
 }
-
 
 const ProductTitle = styled.div`
 	text-align: center;

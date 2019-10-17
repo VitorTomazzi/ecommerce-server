@@ -3,12 +3,75 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export default class EnterBilling extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			selectedOption: 'option1'
+		};
+	}
+
+	handleOptionChange = (changeEvent) => {
+		this.setState({
+			selectedOption: changeEvent.target.value
+		});
+	};
+
+	handleFormSubmit = (formSubmitEvent) => {
+		formSubmitEvent.preventDefault();
+
+		console.log('You have submitted:', this.state.selectedOption);
+	};
+
 	render() {
 		return (
 			<Billing>
 				<div className="billing-container container">
-					<form>
-						<div className="billing-row">
+					<form onSubmit={this.handleFormSubmit}>
+						<div className="subscription">
+							<h3>Pick your payment plan:</h3>
+							<ul>
+								<li>
+									<label>
+										<input
+											className="form-check-input pricing"
+											type="radio"
+											name="react-tips"
+											checked={this.state.selectedOption === 'option1'}
+											onChange={this.handleOptionChange}
+											value="option1"
+										/>
+										1 box (12bars) = $16
+									</label>
+								</li>
+								<li>
+									<label>
+										<input
+											className="form-check-input pricing"
+											type="radio"
+											name="react-tips"
+											checked={this.state.selectedOption === 'option2'}
+											onChange={this.handleOptionChange}
+											value="option2"
+										/>
+										2 boxes (24bars) = $30
+									</label>
+								</li>
+								<li>
+									<label>
+										<input
+											className="form-check-input  pricing"
+											type="radio"
+											name="react-tips"
+											checked={this.state.selectedOption === 'option3'}
+											onChange={this.handleOptionChange}
+											value="option3"
+										/>
+										3 boxes (36bars) = $42
+									</label>
+								</li>
+							</ul>
+						</div>
+						<div className="row billing-row">
 							<div className="col-50">
 								<h3>Billing Address</h3>
 								<label for="fname">
@@ -71,9 +134,9 @@ export default class EnterBilling extends Component {
 							<input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
 						</label>
 						<div className="place-order">
-						<Link to="#">
-							<NextButton> Place Order </NextButton>
-						</Link>
+							<Link to="#">
+								<NextButton> Place Order </NextButton>
+							</Link>
 						</div>
 					</form>
 				</div>
@@ -88,8 +151,20 @@ const Billing = styled.div`
 	.billing-container {
 		padding: 1rem;
 	}
+	.subscription {
+		padding: 2rem 0rem;
+	}
+	.subscription ul {
+		list-style: none;
+	}
+	${'' /* ul > label {
+		font-size: 5rem;
+	} */}
+	.pricing {
+		margin-right: 2rem;
+	}
 	.place-order {
-		display:flex;
+		display: flex;
 		justify-content: center;
 	}
 `;
