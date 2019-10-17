@@ -58,7 +58,7 @@ const Hero = styled.div`
 		align-items: center;
 		text-align: center;
 		position: absolute;
-		top: 46%;
+		top: 44%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: rgba(0, 0, 0, .9);
@@ -91,7 +91,7 @@ const Hero = styled.div`
 	}
 	.fa-running {
 		padding-left: 1rem;
-		${'' /* color: #f0a4f0 */}
+		${'' /* color: #f0a4f0 */};
 	}
 `;
 
