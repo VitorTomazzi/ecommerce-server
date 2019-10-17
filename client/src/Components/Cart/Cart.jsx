@@ -17,7 +17,7 @@ export default class Cart extends Component {
 							return (
 								<FullCart>
 									<CartTitle>
-										<h1>Your Cart</h1>
+										<h1>Your <span style={{color: "#f0a4f0"}}>Cart</span></h1>
 									</CartTitle>
 
 									<CartColumns />

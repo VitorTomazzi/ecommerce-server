@@ -17,13 +17,13 @@ class Navbar extends Component {
 					<Link className="nav-item nav-link ml-auto active" to="/glue-list">
 						Mortar's List
 					</Link>
-					<Link className="nav-item nav-link ml-auto active" to="/signup">
+					<Link hidden className="nav-item nav-link ml-auto active" to="/signup">
 						Sign Up
 					</Link>
-					<Link className="nav-item nav-link ml-auto active" to="/login">
+					<Link hidden className="nav-item nav-link ml-auto active" to="/login">
 						Login
 					</Link>
-					<Link className="nav-item nav-link ml-auto active" to="/billing">
+					<Link hidden className="nav-item nav-link ml-auto active" to="/billing">
 						Billing
 					</Link>
 					<Link hidden className="nav-item nav-link ml-auto active" to="/recipes">

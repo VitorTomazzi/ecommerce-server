@@ -1,3 +1,5 @@
+// filler data
+
 export const cereal = [
 {"id":1,"inCart":false,"image":"https://images-na.ssl-images-amazon.com/images/I/915wh9MRkqL._SX342_.jpg","name":"100% Bran","mfr":"N","type":"C","calories":"70","protein":"4","fat":"1","sodium":"130","fiber":"10","carbo":"5","sugars":"6","potass":"280","vitamins":"25","shelf":"3","weight":"1","cups":"0.33","rating":"68.402973"},
 {"id":2,"inCart":false,"image":"http://www.all-bran.com/content/dam/NorthAmerica/allbran/v3/allbran_en_us/products/ab-complete-wheat-flakes.png","name":"All-Bran","mfr":"K","type":"C","calories":"70","protein":"4","fat":"1","sodium":"260","fiber":"9","carbo":"7","sugars":"5","potass":"320","vitamins":"25","shelf":"3","weight":"1","cups":"0.33","rating":"59.425505"},

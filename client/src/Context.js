@@ -146,7 +146,6 @@ class ProductProvider extends Component {
 					handleDetail: this.handleDetail,
 					addToCart: this.addToCart,
 					searchCereal: this.searchCereal,
-					showCereal: this.showCereal,
 					openModal: this.openModal,
 					closeModal: this.closeModal,
 					removeItem: this.removeItem,

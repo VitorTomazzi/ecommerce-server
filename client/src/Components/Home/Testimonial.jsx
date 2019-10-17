@@ -24,7 +24,7 @@ export default class Testimonial extends Component {
 								<i class="fas fa-star" />
 								<i class="fas fa-star" />
 							</div>
-							<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."</p>
+							<p className="text-center">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."</p>
 						</div>
 
 						<div className="col-lg col-md who">
@@ -41,13 +41,13 @@ export default class Testimonial extends Component {
 								<i class="fas fa-star" />
 								<i class="fas fa-star" />
 							</div>
-							<p>"Ultrices mi tempus imperdiet nulla malesuada pellentesque elit."</p>
+							<p className="text-center">"Ultrices mi tempus imperdiet nulla malesuada pellentesque elit."</p>
 						</div>
 
 						<div className="col-lg col-md who">
 							<div className="who-pic">
 								<img
-									src="https://images.unsplash.com/photo-1554731340-80eb1d6cec50?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80"
+									src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"
 									alt="user"
 								/>
 							</div>
@@ -58,7 +58,7 @@ export default class Testimonial extends Component {
 								<i class="fas fa-star" />
 								<i class="fas fa-star" />
 							</div>
-							<p>"Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida."</p>
+							<p className="text-center">"Mi tempus imperdiet nulla malesuada pellentesque elit eget gravida."</p>
 						</div>
 					</div>
 				</Who>
@@ -84,8 +84,7 @@ const Who = styled.div`
 		flex-direction: column;
 		align-items: center;
 		flex-wrap: wrap;
-		${'' /* border: .1rem solid green; */} 
-		margin: 1rem .5rem;
+		${'' /* border: .1rem solid green; */} margin: 1rem .5rem;
 		background-color: white;
 		padding: 1.5rem;
 		border-radius: 1rem;
@@ -96,14 +95,14 @@ const Who = styled.div`
 		text-align: center;
 		background: white;
 		border: .1rem solid #fefefe;
-		${'' /* padding: 2rem; */} border-radius: 50%;
-		width: 10rem;
-		height: 10rem;
+		border-radius: 50%;
+		padding: 1rem;
+		width: 13rem;
+		height: 11rem;
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
 		position: relative;
-		${'' /* background-image: url("https://images.unsplash.com/photo-1534818113099-dbe2b2e800ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80"); */};
 	}
 	.who-heading {
 		margin-bottom: 2.5rem;

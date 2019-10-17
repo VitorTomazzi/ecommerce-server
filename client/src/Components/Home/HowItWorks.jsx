@@ -24,11 +24,9 @@ export default class HowItWorks extends Component {
 
 						<i class="fas fa-chevron-right" />
 
-						{/* <i class="fas fa-shipping-fast" /> */}
-
 						<div className="how">
 							<img src="https://img.icons8.com/ios/50/000000/cooker.png" alt="oven" />
-							<h3>We'll build them for you</h3>
+							<h3>We'll build your bars for you</h3>
 						</div>
 
 						<i class="fas fa-chevron-right" />
