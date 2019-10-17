@@ -70,9 +70,11 @@ export default class EnterBilling extends Component {
 						<label>
 							<input type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
 						</label>
+						<div className="place-order">
 						<Link to="#">
 							<NextButton> Place Order </NextButton>
 						</Link>
+						</div>
 					</form>
 				</div>
 			</Billing>
@@ -86,11 +88,15 @@ const Billing = styled.div`
 	.billing-container {
 		padding: 1rem;
 	}
+	.place-order {
+		display:flex;
+		justify-content: center;
+	}
 `;
 
 const NextButton = styled.button`
-	background-color: lightgreen;
-	border: .05rem solid lightgreen;
+	background-color: #f0a4f0;
+	border: .05rem solid #f0a4f0;
 	border-radius: .4rem;
 	color: white;
 	font-size: 1.4rem;
@@ -99,7 +105,7 @@ const NextButton = styled.button`
 	transition: all .5s ease-in-out;
 	&:hover {
 		background-color: white;
-		color: lightgreen;
+		color: #f0a4f0;
 	}
 	&:focus {
 		outline: none;

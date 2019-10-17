@@ -10,7 +10,7 @@ export default class HowItWorks extends Component {
 					<div className="how-heading">
 						<h2> How it works </h2>
 					</div>
-					<div className="how-content text-capitalize">
+					<div className="how-content">
 						<Link to="/cereal-list">
 							<div className="how">
 								<img
@@ -28,15 +28,20 @@ export default class HowItWorks extends Component {
 
 						<div className="how">
 							<img src="https://img.icons8.com/ios/50/000000/cooker.png" alt="oven" />
-							<h3>We'll do all the work</h3>
+							<h3>We'll build them for you</h3>
 						</div>
 
 						<i class="fas fa-chevron-right" />
 
 						<div className="how">
 							<img src="https://img.icons8.com/ios/50/000000/successful-delivery.png" alt="delivery" />
-							<h3>Enjoy</h3>
+							<h3>Sit tight then grab-and-go</h3>
 						</div>
+					</div>
+					<div className="button-section">
+						<Link to="/cereal-list">
+							<StartButton>To Cereals!</StartButton>
+						</Link>
 					</div>
 				</How>
 			</React.Fragment>
@@ -88,10 +93,33 @@ const How = styled.div`
 		margin-top: 3rem;
 	}
 	.how-heading {
+		text-align: center;
 		margin-bottom: 2.5rem;
 	}
 	.how-heading h2 {
 		font-size: 3.5rem;
 		font-family: 'Luckiest Guy', cursive;
+	}
+	.button-section {
+		margin-top: 4rem;
+	}
+`;
+
+const StartButton = styled.button`
+	background-color: #f0a4f0;
+	border: .05rem solid #f0a4f0;
+	border-radius: .4rem;
+	color: white;
+	font-size: 1.4rem;
+	padding: .7rem .9rem;
+	cursor: pointer;
+	transition: all .5s ease-in-out;
+	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
+	&:hover {
+		background-color: white;
+		color: #f0a4f0;
+	}
+	&:focus {
+		outline: none;
 	}
 `;

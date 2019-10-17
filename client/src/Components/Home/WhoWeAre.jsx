@@ -7,22 +7,21 @@ export default class WhoWeAre extends Component {
 		return (
 			<Hero>
 				<div className="hero-image">
-					{/* <img
-						src="https://images.unsplash.com/photo-1515774004412-e3185c2a8217?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1984&q=80"
-						alt="hero"
-					/> */}
 					<div className="hero-text">
 						<h1>
 							<span className="a">Kr</span>
 							<span className="b">un</span>
 							<span className="c">ch</span>
 						</h1>
-						
-						<h5 className="text-capitalize">build-your-own breakfast bars</h5>
+
+						<h5 className="text-capitalize">
+							breakfast bars on-the-go
+							<i class="fas fa-running" />
+						</h5>
 
 						<div className="button-section">
 							<Link to="/cereal-list">
-								<StartButton>Let's get started!</StartButton>
+								<StartButton>Let's start!</StartButton>
 							</Link>
 						</div>
 					</div>
@@ -65,14 +64,14 @@ const Hero = styled.div`
 		color: rgba(0, 0, 0, .9);
 	}
 	.hero-text h1 {
-		font-size: 7.5rem;
+		font-size: 7.4rem;
 		letter-spacing: .2rem;
 		color: #f0a4f0;
 
 		text-shadow: .1rem .1rem .8rem rgba(0, 0, 0, .2);
 	}
 	.hero-text h5 {
-		font-size: 2.2rem;
+		font-size: 2.4rem;
 		letter-spacing: .2rem;
 		color: #a4a4f0;
 		width: 25rem;
@@ -90,12 +89,16 @@ const Hero = styled.div`
 	.button-section {
 		margin-top: 2rem;
 	}
+	.fa-running {
+		padding-left: 1rem;
+		${'' /* color: #f0a4f0 */}
+	}
 `;
 
 //styled component for button. we can put this in its own component file later if we want
 const StartButton = styled.button`
-	background-color: #a4a4f0;
-	border: .05rem solid #a4a4f0;
+	background-color: #f0a4f0;
+	border: .05rem solid #f0a4f0;
 	border-radius: .4rem;
 	color: white;
 	font-size: 1.4rem;
@@ -105,7 +108,7 @@ const StartButton = styled.button`
 	box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
 	&:hover {
 		background-color: white;
-		color: #a4a4f0;
+		color: #f0a4f0;
 	}
 	&:focus {
 		outline: none;

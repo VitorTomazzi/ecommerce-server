@@ -24,7 +24,7 @@ export default class Cart extends Component {
 									<CartList value={value} />
 
 									<div className="co-btn">
-										<Link to="/billing">
+										<Link to="/signup">
 											<CheckoutBtn>Check Out</CheckoutBtn>
 										</Link>
 									</div>
@@ -60,8 +60,8 @@ const CartTitle = styled.div`
 `;
 
 const CheckoutBtn = styled.button`
-	background-color: lightgreen;
-	border: .05rem solid lightgreen;
+	background-color: #f0a4f0;
+	border: .05rem solid #f0a4f0;
 	border-radius: .4rem;
 	color: white;
 	font-size: 1.4rem;
@@ -70,7 +70,7 @@ const CheckoutBtn = styled.button`
 	transition: all .5s ease-in-out;
 	&:hover {
 		background-color: white;
-		color: lightgreen;
+		color: #f0a4f0;
 	}
 	&:focus {
 		outline: none;

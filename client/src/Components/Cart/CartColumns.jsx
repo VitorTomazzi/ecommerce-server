@@ -8,7 +8,7 @@ export default class CartColumns extends Component {
                 <Columns className="container d-none d-lg-block text-center my-5">
                     <div className="row">
                         <div className="col-10 mx-auto col-lg-2">
-                            <p>Products</p>
+                            <p>Ingredients</p>
                         </div>
                         <div className="col-10 mx-auto col-lg-2">
                             <p>Name</p>

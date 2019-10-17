@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import Dropdown from 'react-bootstrap/Dropdown'
 
 class Navbar extends Component {
 	render() {
 		return (
 			<React.Fragment>
-				<Nav className="navbar navbar-dark">
+				<Nav className="navbar navbar-dark navbar-expand-lg">
 					<Link className="navbar-brand" to="/">
 						Krunch
 					</Link>
@@ -22,7 +23,10 @@ class Navbar extends Component {
 					<Link className="nav-item nav-link ml-auto active" to="/login">
 						Login
 					</Link>
-					<Link className="nav-item nav-link ml-auto active" to="/recipes">
+					<Link className="nav-item nav-link ml-auto active" to="/billing">
+						Billing
+					</Link>
+					<Link hidden className="nav-item nav-link ml-auto active" to="/recipes">
 						Secret Recipe
 					</Link>
 					<Link className="nav-item nav-link ml-auto" to="/cart">

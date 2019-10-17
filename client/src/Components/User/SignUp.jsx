@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import api from '../../api';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export default class Signup extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			username: '',
+			email: '',
 			name: '',
 			password: '',
 			message: null
@@ -23,11 +25,11 @@ export default class Signup extends Component {
 	handleClick = (e) => {
 		e.preventDefault();
 		api
-			.signup({ username: this.state.username, password: this.state.password })
+			.signup({ username: this.state.username, email: this.state.email, password: this.state.password })
 			.then((result) => {
 				console.log('SUCCESS!', result, this);
 				this.props.setUser(result);
-				this.props.history.push("/recipes");
+				this.props.history.push('/billing');
 			}) // Redirect to the login
 			.catch((err) => this.setState({ message: err.toString() }));
 	};
@@ -37,14 +39,21 @@ export default class Signup extends Component {
 			<SignUp>
 				<form id="signup" className="container">
 					<div className="header">
-						<h3>Who's Hungry?!</h3>
+						<h3>We know. We're hungry, too!</h3>
 
-						<p>Let's get you all signed up</p>
+						<p>You'll only have to do this once. We promise</p>
 					</div>
 
 					<div className="sep" />
 
 					<div className="inputs">
+						<input
+							type="email"
+							value={this.state.email}
+							name="email"
+							placeholder="Krunch@me.com"
+							onChange={this.handleInputChange}
+						/>{' '}
 						<input
 							type="text"
 							value={this.state.username}
@@ -59,20 +68,15 @@ export default class Signup extends Component {
 							placeholder="Password"
 							onChange={this.handleInputChange}
 						/>{' '}
-						{/* <input
-							type="email"
-							value={this.state.email}
-							name="email"
-							placeholder="email@email.com"
-							onChange={this.handleInputChange}
-						/>{' '} */}
 						<div className="checkboxy">
 							<input name="cecky" id="checky" value="1" type="checkbox" />
 							<label className="terms">I accept the terms of use</label>
 						</div>
-						<button id="submit" className="hoverButton" onClick={(e) => this.handleClick(e)}>
-							Sign up
-						</button>
+						<Link to="#">
+							<button id="submit" className="hoverButton" onClick={(e) => this.handleClick(e)}>
+								Check Out
+							</button>
+						</Link>
 						{this.state.message && <div className="info info-danger">{this.state.message}</div>}
 					</div>
 				</form>
@@ -157,7 +161,8 @@ const SignUp = styled.div`
 	}
 
 	#signup .inputs input[type=text],
-	input[type=password], input[type=email] {
+	input[type=password],
+	input[type=email] {
 		background: #f5f5f5;
 		font-size: 0.8rem;
 		-moz-border-radius: 3px;
@@ -172,7 +177,8 @@ const SignUp = styled.div`
 	}
 
 	#signup .inputs input[type=text]:focus,
-	input[type=password]:focus, input[type=email]:focus {
+	input[type=password]:focus,
+	input[type=email]:focus {
 		background: #fff;
 		box-shadow: 0px 0px 0px 3px #fff38e, inset 0px 2px 3px rgba(0, 0, 0, 0.2), 0px 5px 5px rgba(0, 0, 0, 0.15);
 		outline: none;

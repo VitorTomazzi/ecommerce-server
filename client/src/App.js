@@ -35,7 +35,7 @@ export default class App extends Component {
 		return (
 			<React.Fragment>
 				<Navbar />
-				
+
 				{/* {this.state.user.username} */}
 
 				<Switch>
