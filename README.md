@@ -29,7 +29,7 @@
 - [Acknowledgments](#acknowledgement)
 
 ## 🧐 About <a name = "about"></a>
-The goal of the project was to practice using React's context api for creating global access to states and functions. Additionally, I wanted to have UX/UI and the customer experience in mind in order to get a better understanding of the consumer's perspective when navigating online shopping.
+The goal of the project was to use React's context api for creating global access to states and functions. Additionally, I used some aspects of design thinking (CX/UX) to get a better understanding of the consumer's perspective when navigating through an online store.
 
 
 
