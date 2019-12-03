@@ -3,7 +3,7 @@
  <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
 </p>
 
-<h3 align="center">Krunch Breakfast Bars On-The-Go</h3>
+<h3 align="center">Krunch - Breakfast Bars On-The-Go</h3>
 <h5 align="center">To visit the website <a href="https://krunch-cereal-glue.herokuapp.com/">CLICK HERE</a></h5>
 <div align="center">
 
